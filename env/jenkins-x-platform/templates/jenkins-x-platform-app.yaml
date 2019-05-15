@@ -1,0 +1,17 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  annotations:
+    description: A viewer can view all project resources
+    expose.config.fabric8.io/clusterip-port-if-empty-key: docker.registry
+    jenkins.io/chart-description: Jenkins X next gen cloud CI / CD platform for Kubernetes
+    jenkins.io/chart-repository: http://chartmuseum.jenkins-x.io
+    title: Viewer
+  creationTimestamp: null
+  labels:
+    jenkins.io/app-name: jenkins-x-platform
+    jenkins.io/app-version: 2.0.276
+    jenkins.io/kind: EnvironmentRole
+  name: viewer
+  namespace: jx
+spec: {}
